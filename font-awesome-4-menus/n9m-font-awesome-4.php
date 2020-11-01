@@ -29,7 +29,7 @@ License: GPLv2 or later
 class FontAwesomeFour {
 
     public static $defaults = array(
-        'maxcdn_location' => 'https://cdn.jsdelivr.net/gh/Cusnd/PublicSource@latest/tree/main/font-awesome-4-menus/css/font-awesome.min.css',
+        'maxcdn_location' => 'https://cdn.jsdelivr.net/gh/Cusnd/PublicSource/font-awesome-4-menus/css/font-awesome.min.css',
         'spacing' => 1,
         'stylesheet' => 'local',
         'version' => '4.7.0'
@@ -52,7 +52,7 @@ class FontAwesomeFour {
 
     function admin_enqueue_scripts( $hook ){
         if( 'settings_page_n9m-font-awesome-4-menus' == $hook ){
-            wp_enqueue_style( 'n9m-admin-font-awesome-4', plugins_url( 'https://cdn.jsdelivr.net/gh/Cusnd/PublicSource@latest/tree/main/font-awesome-4-menus/css/font-awesome.min.css', __FILE__ ), false, self::$defaults[ 'version' ] );
+            wp_enqueue_style( 'n9m-admin-font-awesome-4', plugins_url( 'https://cdn.jsdelivr.net/gh/Cusnd/PublicSource/font-awesome-4-menus/css/font-awesome.min.css', __FILE__ ), false, self::$defaults[ 'version' ] );
         }
     }
 
@@ -228,7 +228,7 @@ class FontAwesomeFour {
         $settings = get_option( 'n9m-font-awesome-4-menus', self::$defaults );
         switch( $settings[ 'stylesheet' ] ){
             case 'local':
-                wp_register_style( 'font-awesome-four', plugins_url( 'https://cdn.jsdelivr.net/gh/Cusnd/PublicSource@latest/tree/main/font-awesome-4-menus/css/font-awesome.min.css', __FILE__ ), array(), self::$defaults[ 'version' ], 'all' );
+                wp_register_style( 'font-awesome-four', plugins_url( 'https://cdn.jsdelivr.net/gh/Cusnd/PublicSource/font-awesome-4-menus/css/font-awesome.min.css', __FILE__ ), array(), self::$defaults[ 'version' ], 'all' );
                 wp_enqueue_style( 'font-awesome-four' );
                 break;
             case 'maxcdn':
